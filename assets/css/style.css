@@ -380,7 +380,7 @@ section {
 
 
 /*--------------------------------------------------------------
-# Skills
+# Skills & Courses
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
@@ -415,6 +415,25 @@ section {
   transition: 0.9s;
   background-color: #149ddd;
 }
+
+.plus-list {
+    list-style-type: none; /* Removes the default bullets */
+    padding-left: 1em;    /* Provides space for the custom bullet */
+}
+
+.plus-list li::before {
+    content: "+ ";        /* Inserts a plus sign and a space before each list item */
+    color: #008080;         /* Optional: Change the color of the plus sign */
+    font-weight: bold;    /* Optional: Make the plus sign bold */
+    position: absolute;   /* Optional: For precise positioning */
+    left: 0;              /* Optional: Aligns the plus sign to the left edge of the padding */
+}
+
+/* Optional: Additional CSS for proper alignment if needed */
+.plus-list li {
+    position: relative; /* Essential for absolute positioning of the ::before element to work correctly */
+}
+
 
 /*--------------------------------------------------------------
 # Resume
