@@ -629,6 +629,27 @@ section {
   font-size: 14px;
 }
 
+.services .description ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.services .description li {
+  padding-left: 0;
+}
+
+.services .description li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.services .description li i {
+  margin-right: 8px;
+  color: #149ddd; /* optional: match theme color */
+}
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
