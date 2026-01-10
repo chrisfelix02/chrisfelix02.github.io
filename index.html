@@ -58,6 +58,9 @@
         <ul>
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#music" class="nav-link scrollto"><i class="bx bx-music"></i> <span>Music</span></a></li>
+          <li><a href="#coursework" class="nav-link scrollto"><i class="bx bx-book"></i> <span>Coursework</span></a></li>
+          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-brain"></i> <span>Skills</span></a></li>
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
           <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
           <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Experience</span></a></li>
@@ -137,7 +140,7 @@
     </section><!-- End About Section -->
 
     <!-- Embedded Spotify Playlist Section -->
-    <section id="music" class="services">
+    <section id="music" class="Music">
     <div class="container">
 
     <div class="section-title">
@@ -148,7 +151,8 @@
         playlist that consists of all my liked songs that I frequently update.
       </p>
     </div>
-
+    
+    <!-- Spotify Embed -->
     <div class="row justify-content-center">
       <div class="col-lg-10">
         <iframe style="border-radius:12px" 
@@ -363,48 +367,104 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
+          <!-- 16-bit RISC Microprocessor -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-All">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/nuevo.png" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="I designed and developed a 16-bit reduced instruction set computing (RISC) processor using CMOS integrated circuits.
-                To do so, I created each individual component of the processor (Register File, Shifter, ALU, etc) and connected them using a datapath and controller. Moreover, I created a custom 8T SRAM block memory cache for the frequently accessed data (utilizing the properties of spatial and
-                temporal locality) that sits adjacent to the DMEM. Lastly, functionality was tested using Verilog and Assembly programming to simulate waveforms."><i class="bx bx-plus"></i></a>
+                <a href="assets/img/portfolio/nuevo.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="
+                This project involved the full-cycle design of a 16-bit RISC processor using a VLSI Hierarchical Design Flow in 
+                Cadence Virtuoso. Starting from the transistor level, I developed and integrated critical architectural blocks, 
+                including a 16-word by 16-bit Register File, a high-performance ALU, and a 16-bit Logarithmic Shifter. These components 
+                were synthesized into a 2-stage pipelined datapath and managed by a custom controller to optimize instruction throughput. 
+                As a custom feature, my team and I implemented a 64-word by 16-bit 8T SRAM memory block, which utilized decoupled read/write 
+                paths to ensure stable, low-power data caching. The entire system was rigorously verified using DRC/LVS checks, NCVerilog, 
+                and HSpice/Monte-Carlo simulations to ensure functionality under process variations. The final design was brought to completion 
+                through industry-standard Automatic Place and Route (APR) techniques, resulting in a fully functional, integrated processor architecture."><i class="bx bx-plus"></i>
+              </a>
+              <!-- NEW: Report link -->
+              <a href="https://docs.google.com/document/d/1mpJhLBNwS4vVColNWpU13KaHrOKkkqG5/edit?usp=sharing&ouid=114927298854763768036&rtpof=true&sd=true"
+              target="_blank"
+              title="Read Full Technical Report (PDF)">
+              <i class="bx bx-book"></i>
+              </a>
               </div>
             </div>
           </div>
 
+          <!-- CPU Pipeline -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-All">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="I programmed a cycle-accurate behavioral simulator for a pipelined implementation of an Instruction Set Architecture (ISA).
-                Furthermore, I implemented branch predictions and complete data forwarding (or operand forwarding) to limit performance deficits."><i class="bx bx-plus"></i></a>
+                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="
+                This project involved developing a cycle-accurate behavioral simulator for a pipelined implementation of the LC-2K instruction 
+                set architecture. Designed to mimic real-world hardware clocking schemes, the simulator manages state transitions through a 
+                dual-state approach, utilizing state and newState variables to simulate the simultaneous updates of clocked components at the 
+                positive edge of a clock cycle. The architecture features a five-stage pipeline—Instruction Fetch (IF), Instruction Decode (ID), 
+                Execute (EX), Memory (Mem), and Write Back (WB)—and overlaps the execution of multiple instructions to maximize throughput
+                Furthermore, I implemented several advanced architectural features such as branch predictions, pipeline stalling, and complete 
+                data forwarding to limit performance deficits and ensure high-fidelity performance."><i class="bx bx-plus"></i>
+              </a>
+              <!-- NEW: Report link -->
+              <a href="https://github.com/FPaddle007/EECS-370-Intro-to-Computer-Organization-Projects/blob/main/Project%203/simulator.c"
+              target="_blank"
+              title="See Project Code (GitHub)">
+              <i class="bx bx-book"></i>
+              </a>
               </div>
             </div>
           </div>
 
+          <!-- CPU Cache Design -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-All">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-3.png" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="I programmed a CPU cache design (unified instruction/data) that integrates the cache into a behavioral simulator.
-                Also, I integrated Assembly language so that once the processor executes the program, it will access instructions and data; these
-                accesses will be serviced by the cache, which will transfer data to/ from memory as needed."><i class="bx bx-plus"></i></a>
+                <a href="assets/img/portfolio/portfolio-3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="
+                In this project, I developed a highly flexible CPU cache simulator and integrated it into a behavioral processor 
+                model to study the impact of cache design on system performance. The simulator features a unified instruction and 
+                data cache with configurable parameters, including variable block sizes, set counts, and associativity—ranging from 
+                direct-mapped to fully associative configurations. The simulator follows a write-back and allocate-on-write policy, 
+                ensuring efficient memory traffic by only updating main memory when a 'dirty' block is evicted. To manage block placement 
+                and replacement, I implemented a Least-Recently Used (LRU) algorithm within each set, prioritized by first filling any 
+                available invalid blocks."><i class="bx bx-plus"></i>
+              </a>
+              <!-- NEW: Report link -->
+              <a href="https://github.com/FPaddle007/EECS-370-Intro-to-Computer-Organization-Projects/blob/main/Project%204/cache.c"
+              target="_blank"
+              title="See Project Code (GitHub)">
+              <i class="bx bx-book"></i>
+              </a>
               </div>
             </div>
           </div>
 
+          <!-- Virtual vehicle with advanced features -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-All">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-4.png" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Using Matlab, Simulink C code generation and a haptic wheel, I created an autonomous car steering program that 
-                maintained a particular distance from the road's center."><i class="bx bx-plus"></i></a>
+                <a href="assets/img/portfolio/portfolio-4.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="
+                In this project, I developed a comprehensive Simulink model for a virtual vehicle featuring Adaptive Cruise Control (ACC) 
+                and Automatic Steering. I implemented a custom MATLAB 'Pick Lead' logic that dynamically identified the closest lead vehicle 
+                by processing real-time position and velocity vectors transmitted over a CAN network. To ensure precise lane-keeping and speed 
+                regulation, I designed a nested PD control architecture consisting of an outer position loop and an inner torque loop, while also 
+                fine-tuning controller gains to maintain system stability and eliminate oscillations at speeds up to 30 m/s. The project demonstrated 
+                a complete Model-Based Design flow, integrating hardware-in-the-loop components like a haptic wheel and potentiometer with autonomous 
+                state logic to achieve seamless vehicle control."><i class="bx bx-plus"></i>
+              </a>
+              <!-- NEW: Report link -->
+              <a href="https://drive.google.com/file/d/1M9mfmnv_HzQu0IVFWRa-Lllb_oIewXo6/view?usp=sharing"
+              target="_blank"
+              title="Read Full Technical Report (PDF)">
+              <i class="bx bx-book"></i>
+              </a>
               </div>
             </div>
           </div>
 
+          <!-- LED Brightness Control Circuit -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-All">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-5.png" class="img-fluid" alt="">
@@ -417,10 +477,18 @@
                 and a functional breadboard prototype were built and tested, providing hands-on experience in analog 
                 electronics, circuit debugging, and op-amp behavior.">
                 <i class="bx bx-plus"></i>
+              </a>
+              <!-- NEW: Report link -->
+              <a href="https://drive.google.com/file/d/1nBqj8O7Yd8AF4beXK7D5IL1wtde8fPAc/view?usp=sharing"
+              target="_blank"
+              title="Read Full Technical Report (PDF)">
+              <i class="bx bx-book"></i>
+              </a>
               </div>
             </div>
           </div>
 
+          <!-- Rust & Spectre -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-All">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-6.png" class="img-fluid" alt="">
@@ -431,11 +499,19 @@
                 Spectre V1 transient execution exploit in Rust, demonstrating a sophisticated buffer overread vulnerability 
                 in the language’s memory safety guarantees, and developing and testing the exploit on an x86-based 
                 out-of-order core running Linux using Rust’s LLVM-based toolchain for efficient and secure compilation 
-                and execution."><i class="bx bx-plus"></i></a>
+                and execution."><i class="bx bx-plus"></i>
+              </a>
+              <!-- NEW: Report link -->
+              <a href="https://drive.google.com/file/d/1Uge1za5KScwtauxeAPXg0q-kryy6dZWJ/view?usp=sharing"
+              target="_blank"
+              title="Read Full Technical Report (PDF)">
+              <i class="bx bx-book"></i>
+              </a>
               </div>
             </div>
           </div>
 
+          <!-- Traffic Light Controller -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-All">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
@@ -450,31 +526,110 @@
                 of vision. The FSM cleanly separates state sequencing from output logic, ensuring deterministic transitions and safe 
                 all-red intervals when switching directions. This project demonstrates practical FPGA design concepts such as synchronous 
                 state machines, debouncing and synchronizing asynchronous inputs, hardware-based countdown timers, and constraint-driven 
-                I/O mapping, closely mirroring real-world embedded traffic control systems."><i class="bx bx-plus"></i></a>
+                I/O mapping, closely mirroring real-world embedded traffic control systems."><i class="bx bx-plus"></i>
+              </a>
+              <!-- NEW: Report link -->
+              <a href="https://drive.google.com/file/d/1-1LH3pvNznCLKa5LvkAqyR_bheCT5f1J/view?usp=sharing"
+              target="_blank"
+              title="Read Full Technical Report (PDF)">
+              <i class="bx bx-book"></i>
+              </a>
               </div>
             </div>
           </div>
 
-          <!--<div class="col-lg-4 col-md-6 portfolio-item filter-All">
+          <!-- BME Temperature Sensor -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-All">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="This is the personal website that you are viewing right now. I began using a template I had found online that fit the look I was going for.
-                I then heavily editted the template and changed a good amount of the structure to better suit my needs and properly showcase my skills and achievement in a way that was more personalized to who I am. I eddited and changed the HTML as well as CSS documents and asset files heavily so they would 
-                properly be able to be hosted on GitHub Pages. I also slightly editted the js files slightly to change some functions to those I like."><i class="bx bx-plus"></i></a>
+                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="
+                In this embedded systems project, I designed an Arduino-controlled temperature monitoring system capable 
+                of real-time data acquisition and threshold-based alerting. Utilizing an LM35 analog sensor interfaced 
+                with an Arduino Leonardo, the system continuously sampled environmental data, which was then processed 
+                in MATLAB to convert raw voltage into Celsius. The implementation featured a live plotting interface and 
+                a physical alarm system where an LED and buzzer were triggered once a predefined threshold was exceeded."><i class="bx bx-plus"></i>
+              </a>
+              <!-- NEW: Report link -->
+              <a href="https://drive.google.com/file/d/1sWRlfJV-j-ukHGT5fajmjel2VR1jJgI0/view?usp=sharing"
+              target="_blank"
+              title="Read Full Technical Report (PDF)">
+              <i class="bx bx-book"></i>
+              </a>
               </div>
             </div>
-          </div> -->
+          </div>
 
-          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-All">
+          <!-- BME Muscle Sensor -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-All">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="
+                This project explored the practical application of Electromyography (EMG) as a control signal for 
+                external hardware. Using a Myoware EMG sensor and an Arduino Leonardo, I developed a system that 
+                captured electrical muscle activity during various states of contraction. The system translated 
+                these biological signals into a three-stage visual feedback interface using LEDs, where different 
+                levels of muscle engagement (rest, weak contraction, and strong contraction) triggered specific 
+                digital outputs based on real-time thresholding logic in MATLAB"><i class="bx bx-plus"></i>
+              </a>
+              <!-- NEW: Report link -->
+              <a href="https://drive.google.com/file/d/1fBxCWKpWX1guXeLotx4-FIqHCKfDZSjj/view?usp=sharing"
+              target="_blank"
+              title="Read Full Technical Report (PDF)">
+              <i class="bx bx-book"></i>
+              </a>
               </div>
             </div>
           </div> 
-        -->
+
+          <!-- BME ECG VS EMG (midterm) -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-All">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-10.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-10.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="
+                This project focuses on the acquisition and differentiated analysis of Electromyogram (EMG) and 
+                Electrocardiogram (ECG) signals using the MP41 Data Acquisition Kit. The core objective was to 
+                develop a robust MATLAB-based processing pipeline to transform raw, noisy physiological data into 
+                interpretable waveforms for clinical assessment. By implementing a sophisticated filtering 
+                architecture—including Butterworth band-pass (0-500 Hz), notch, and high-pass filters—I successfully 
+                mitigated powerline interference and baseline wander, ensuring the integrity of the muscle and cardiac 
+                signals."><i class="bx bx-plus"></i>
+              </a>
+              <!-- NEW: Report link -->
+              <a href="https://docs.google.com/document/d/1ceq4somOqVNRHp5HtlnWjPFJdiplwsvk/edit?usp=sharing&ouid=114927298854763768036&rtpof=true&sd=true"
+              target="_blank"
+              title="Read Full Technical Report (PDF)">
+              <i class="bx bx-book"></i>
+              </a>
+              </div>
+            </div>
+          </div> 
+
+          <!-- BME PPG (final) -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-All">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-11.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="
+                This advanced study focused on Photoplethysmography (PPG), a non-invasive optical technique used 
+                to monitor blood volume changes and cardiovascular health. I engineered a transmissive PPG sensor 
+                setup—utilizing a photoresistor and a green LED—interfaced with an Arduino to capture raw physiological 
+                signals at a sampling frequency of 200 Hz. The acquisition pipeline utilized a 4 Hz low-pass Butterworth 
+                filter and signal normalization to isolate the quasi-periodic structure of the heartbeat from significant 
+                motion artifacts and ambient light interference."><i class="bx bx-plus"></i>
+              </a>
+              <!-- NEW: Report link -->
+              <a href="https://drive.google.com/file/d/15ljq0a0nXu1cDr0-2fwRPlR0J51_HKnc/view?usp=sharing"
+              target="_blank"
+              title="Read Full Technical Report (PDF)">
+              <i class="bx bx-book"></i>
+              </a>
+              </div>
+            </div>
+          </div> 
+<!-- add more in between this space if needed! -->
 
         </div>
 
