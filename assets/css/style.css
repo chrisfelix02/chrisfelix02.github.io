@@ -9,9 +9,45 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
-  font-family: "Open Sans", sans-serif;
-  color: #272829;
+:root{
+  --bg-color:#ffffff;
+  --text-color:#272829;
+
+  --header-bg:#040b14;
+  --section-bg:#f5f8fd;
+
+  --card-bg:#ffffff;
+  --title-color:#173b6c;
+  --subtitle-color:#050d18;
+
+  --box-shadow:0 0 24px rgba(0,0,0,.12);
+
+  --input-bg:#ffffff;
+  --input-text:#272829;
+}
+
+body.dark-theme{
+  --bg-color:#121212;
+  --text-color:#f1f1f1;
+
+  --header-bg:#0d1117;
+  --section-bg:#1d1d1d;
+
+  --card-bg:#232323;
+  --title-color:#f1f1f1;
+  --subtitle-color:#d7d7d7;
+
+  --box-shadow:0 0 24px rgba(255,255,255,.05);
+
+  --input-bg:#2a2a2a;
+  --input-text:#ffffff;
+}
+
+body{
+  font-family:"Open Sans",sans-serif;
+  color:var(--text-color);
+  background:var(--bg-color);
+  transition:.35s ease;
 }
 
 a {
@@ -79,7 +115,7 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #040b14;
+  background:var(--header-bg);
   overflow-y: auto;
 }
 
@@ -311,8 +347,9 @@ section {
   overflow: hidden;
 }
 
-.section-bg {
-  background: #f5f8fd;
+.section-bg{
+background:var(--section-bg);
+transition:.35s;
 }
 
 .section-title {
@@ -325,7 +362,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #173b6c;
+  color:var(--title-color);
 }
 
 .section-title h2::after {
@@ -349,7 +386,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #173b6c;
+  color:var(--title-color);
 }
 
 .about .content ul {
@@ -396,7 +433,7 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  color: var(--text-color); /* Changed from #050d18 so it adapts to dark mode */
 }
 
 .skills .progress .skill .val {
@@ -445,7 +482,7 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #173b6c;
+  color:var(--title-color);
 }
 
 .resume .resume-item h4 {
@@ -454,7 +491,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  color: var(--text-color); /* Changed from #050d18 */
   margin-bottom: 10px;
 }
 
@@ -637,7 +674,7 @@ section {
 }
 
 .services .title a {
-  color: #343a40;
+  color: var(--text-color); /* Changed from #343a40 */
 }
 
 .services .title a:hover {
@@ -704,7 +741,7 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #050d18;
+  color: var(--text-color); /* Changed from #050d18 */
 }
 
 .contact .info p {
@@ -855,6 +892,21 @@ section {
   }
 }
 
+.contact input,
+.contact textarea{
+
+background:var(--input-bg);
+color:var(--input-text);
+
+border:1px solid rgba(255,255,255,.1);
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder{
+
+color:#999;
+}
+
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
@@ -934,4 +986,21 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+.services .icon-box,
+.contact .info,
+.contact .php-email-form,
+.portfolio .portfolio-wrap,
+.resume .resume-item,
+.icon-box{
+
+background:var(--card-bg);
+color:var(--text-color);
+
+transition:.35s;
+box-shadow:var(--box-shadow);
+
+border-radius:12px;
+padding:20px;
 }

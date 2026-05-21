@@ -49,8 +49,9 @@
         <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Christopher Felix</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="https://github.com/FPaddle007" target="_blank" rel="noopener noreferrer" class="github"><i class="bx bxl-github"></i></a>
+          <a href="https://github.com/chrisfelix02" target="_blank" rel="noopener noreferrer" class="github"><i class="bx bxl-github"></i></a>
           <a href="https://www.linkedin.com/in/chrisfelix02/" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="#" id="theme-toggle" class="theme-btn" title="Toggle Dark/Light Mode"><i class="bx bx-moon"></i></a>
           </div>
       </div>
 
@@ -186,24 +187,35 @@
         <h4 class="title">M.S. Computer Engineering (VLSI & Computing Systems)</h4>
         <p class="description">
           <ul class="plus-list">
+
+            <li>
+            <a href="https://catalog.fiu.edu/courses/0358411"
+              target="_blank" rel="noopener noreferrer">
+              Advanced Malware Reverse Engineering
+            </a>
+          </li>
+
             <li>
             <a href="https://catalog.fiu.edu/courses/0157061"
               target="_blank" rel="noopener noreferrer">
               Engineering Design of Microprocessor-Based Operating Systems
             </a>
           </li>
+
           <li>
             <a href="https://catalog.fiu.edu/courses/0157071"
               target="_blank" rel="noopener noreferrer">
               Advanced VLSI Design
             </a>
           </li>
+
           <li>
             <a href="https://catalog.fiu.edu/courses/0156641"
               target="_blank" rel="noopener noreferrer">
               VLSI Design
             </a>
           </li>
+
         </ul>
         </p>
       </div>
@@ -459,6 +471,7 @@
 
         <div class="section-title">
           <h2>Projects</h2>
+          <p> Hover over each project and either click the plus sign to read a summary or the book to read the full report!</p>
         </div>
 
         <div class="row" data-aos="fade-up">
@@ -482,7 +495,7 @@
                 including a 16-word by 16-bit Register File, a high-performance ALU, and a 16-bit Logarithmic Shifter. These components 
                 were synthesized into a 2-stage pipelined datapath and managed by a custom controller to optimize instruction throughput. 
                 As a custom feature, my team and I implemented a 64-word by 16-bit 8T SRAM memory block, which utilized decoupled read/write 
-                paths to ensure stable, low-power data caching. The entire system was rigorously verified using DRC/LVS checks, NCVerilog, 
+                paths to ensure stable, low-power data caching. The entire system was rigorously verified with full-custom layout using DRC/LVS checks, NCVerilog, 
                 and HSpice/Monte-Carlo simulations to ensure functionality under process variations. The final design was brought to completion 
                 through industry-standard Automatic Place and Route (APR) techniques, resulting in a fully functional, integrated processor architecture."><i class="bx bx-plus"></i>
               </a>
@@ -511,7 +524,7 @@
                 data forwarding to limit performance deficits and ensure high-fidelity performance."><i class="bx bx-plus"></i>
               </a>
               <!-- NEW: Report link -->
-              <a href="https://github.com/FPaddle007/EECS-370-Intro-to-Computer-Organization-Projects/blob/main/Project%203/simulator.c"
+              <a href="https://github.com/chrisfelix02/EECS-370-Intro-to-Computer-Organization-Projects/blob/main/Project%203/simulator.c"
               target="_blank"
               title="See Project Code (GitHub)">
               <i class="bx bx-book"></i>
@@ -535,7 +548,7 @@
                 available invalid blocks."><i class="bx bx-plus"></i>
               </a>
               <!-- NEW: Report link -->
-              <a href="https://github.com/FPaddle007/EECS-370-Intro-to-Computer-Organization-Projects/blob/main/Project%204/cache.c"
+              <a href="https://github.com/chrisfelix02/EECS-370-Intro-to-Computer-Organization-Projects/blob/main/Project%204/cache.c"
               target="_blank"
               title="See Project Code (GitHub)">
               <i class="bx bx-book"></i>
@@ -733,6 +746,32 @@
               </div>
             </div>
           </div> 
+
+          <!-- 6T SRAM Final (Report) -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-All">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-12nuevo1.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-12nuevo1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="
+                Designed and verified a full-custom 4×4 SRAM memory array in Cadence Virtuoso using a transistor-level 6T 
+                SRAM architecture optimized for read stability and writability. Engineered and integrated complete peripheral 
+                circuitry, including a 2-to-4 row decoder, bitline precharge/equalization circuitry, high-drive write drivers, 
+                and clocked regenerative sense amplifiers for reliable high-speed memory access. Performed transistor sizing and 
+                timing optimization to maximize Static Noise Margin (SNM), minimize read disturb conditions, and maintain robust 
+                write performance under capacitive loading. Verified functionality through Spectre transient simulations using 
+                checkerboard stress patterns (1010/0101) and full-word operations to validate row isolation, column integrity, 
+                and eliminate inter-row crosstalk. Demonstrated system-level understanding of memory hierarchy design, mixed-signal 
+                VLSI integration, and modern SRAM peripheral architecture."><i class="bx bx-plus"></i>
+              </a>
+              <!-- NEW: Report link -->
+              <a href="https://drive.google.com/file/d/1lwtVyj787XSD0htQ78ZDixKY36Fhs6f5/view?usp=sharing"
+              target="_blank"
+              title="Read Full Technical Report (PDF)">
+              <i class="bx bx-book"></i>
+              </a>
+              </div>
+            </div>
+          </div> 
 <!-- add more in between this space if needed! -->
 
         </div>
@@ -849,7 +888,7 @@
             <form action="https://formspree.io/f/xnjajgob" method="POST">
 
               <!-- Redirect after successful submission -->
-              <input type="hidden" name="_next" value="https://fpaddle007.github.io/thank-you.html">
+              <input type="hidden" name="_next" value="https://chrisfelix02.github.io/thank-you.html">
 
               <div class="row">
                 <div class="form-group col-md-6">
@@ -921,5 +960,55 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+
+<script>
+
+const toggle=
+document.getElementById("theme-toggle");
+
+const icon=
+toggle.querySelector("i");
+
+if(localStorage.getItem("theme")==="dark"){
+
+document.body.classList.add("dark-theme");
+
+icon.className="bx bx-sun";
+
+}
+
+toggle.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.body.classList.toggle(
+"dark-theme"
+);
+
+if(document.body.classList.contains(
+"dark-theme"
+)){
+
+icon.className="bx bx-sun";
+
+localStorage.setItem(
+"theme",
+"dark"
+);
+
+}else{
+
+icon.className="bx bx-moon";
+
+localStorage.setItem(
+"theme",
+"light"
+);
+
+}
+
+});
+
+</script>
 
 </html>
